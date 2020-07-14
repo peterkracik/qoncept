@@ -27,6 +27,10 @@ export class AppComponent {
   }
 
   public parseData(data: string) {
-    return JSON.parse(data);
+    try {
+      return JSON.parse(data);
+    } catch (e) {
+      return this.analysisData;
+    }
   }
 }
