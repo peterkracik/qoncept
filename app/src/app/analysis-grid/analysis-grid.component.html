@@ -1,0 +1,19 @@
+<table *ngIf="data[0]; else emptyData">
+    <thead>
+        <tr>
+            <th></th>
+            <th *ngFor="let item of data[0].element_values">{{ item.key }}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of data">
+            <th>{{ row.key }}</th>
+            <td *ngFor="let element of row.element_values">
+                <app-editable-value [value]="element.value" [readOnly]="readOnly" (changeValue)="onChangeValue($event, element)"></app-editable-value>
+            </td>
+            <td class="is-last"></td>
+        </tr>
+    </tbody>
+</table>
+
+<ng-template #emptyData>No data provided.</ng-template>

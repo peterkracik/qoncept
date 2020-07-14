@@ -1,0 +1,31 @@
+table {
+    width: 100%;
+}
+thead {
+    th {
+        padding: 0.5em 1em;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 0.8em;
+    }
+}
+tbody {
+    td, th {
+        border-top: 1px solid rgba(0,0,0,0.1);
+        padding: 0.5em 1em;
+    }
+    th {
+        text-align: center;
+        text-transform: lowercase;
+        font-weight: 400;
+        font-size: 0.8em;
+    }
+    td {
+        text-align: left;
+        font-weight: bold;
+        &.is-last {
+            width: 100%;
+        }
+    }
+}

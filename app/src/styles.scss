@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+:root {
+    --color-background: #1b202b;
+    --color-white: #ffffff;
+    --color-dark: #263238;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--color-dark);
+    background: var(--color-background);
+}
