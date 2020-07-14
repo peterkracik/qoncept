@@ -10,8 +10,10 @@
     ></AnylysisGrid>
   </div>
   <div class="input">
-    <textarea #dataRef (change)="inputChange()">
-      {{ analysisData|json }}
+    <textarea [ngModel]="analysisData|json" (ngModelChange)="analysisData=parseData($event)">
     </textarea>
+    <div>
+      <input type="checkbox" [(ngModel)]="readOnly">ReadOnly
+    </div>
   </div>
 </div>
